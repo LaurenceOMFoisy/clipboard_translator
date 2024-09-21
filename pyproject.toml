@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "clipboard-translator"
+version = "0.1.0"
+description = "Translate any text using openai"
+authors = ["LaurenceOMFoisy <mail@mfoisy.com>"]
+license = "The Unlicense"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+openai = "^1.47.0"
+pyperclip = "^1.9.0"
+python-dotenv = "^1.0.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
