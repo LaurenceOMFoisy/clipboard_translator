@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+
+import argparse
 import os
 
 import openai
@@ -32,13 +35,35 @@ def get_clipboard_content():
 
 
 def main():
+    # Argument parsing
+    parser = argparse.ArgumentParser(description="Translate clipboard content.")
+    parser.add_argument(
+        "-src",
+        "--source",
+        type=str,
+        default="en",
+        help="Source language (default is 'en')",
+    )
+    parser.add_argument(
+        "-tgt",
+        "--target",
+        type=str,
+        default="fr",
+        help="Target language (default is 'fr')",
+    )
+    args = parser.parse_args()
+
+    # Fetch clipboard content
     text = get_clipboard_content()
     if not text:
         print("Clipboard is empty. Please copy some text.")
         return
 
-    translated_text = translate_text(text)
-    print(translated_text)  # Only print the translated text
+    # Perform translation
+    translated_text = translate_text(
+        text, source_language=args.source, target_language=args.target
+    )
+    print(translated_text)
 
 
 if __name__ == "__main__":
