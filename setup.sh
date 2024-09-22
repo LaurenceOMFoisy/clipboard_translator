@@ -1,3 +1,4 @@
+
 #!/bin/bash
 
 # Install dependencies using Poetry
@@ -20,11 +21,16 @@ fi
 echo "Copying cbt.py to ~/.local/bin..."
 cp cbt.py ~/.local/bin/cbt.py
 
-# Create a shell script to call the `cbt.py` through Poetry
+# Get the full path to the Poetry virtual environment
+VENV_PATH=$(poetry env info --path)
+
+# Create a shell script to call the `cbt.py` through Poetry's virtual environment
 cat <<EOL > ~/.local/bin/cbt
 #!/bin/bash
-# This script uses the Poetry environment to run cbt.py
-poetry run python ~/.local/bin/cbt.py "\$@"
+# This script uses the Poetry environment to run cbt.py from anywhere
+source $VENV_PATH/bin/activate
+python ~/.local/bin/cbt.py "\$@"
+deactivate
 EOL
 
 # Make the cbt command executable
