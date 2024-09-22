@@ -75,7 +75,7 @@ poetry install
 
 ### Step 5: Get yourself an OpenAI API key
 
-The installer will create a `.env` file in the project directory and prompt you to input it. You need to add your OpenAI API key to this file. You can also do this manually:
+The installer will create a `.env` file in your `~/` and prompt you to input the key in it. You need to add your OpenAI API key to this file. You can also do this manually:
 
 2. Open the `~/.env` file with any text editor (Notepad, nano, VSCode, etc.), and type `OPENAI_API_KEY=putyourapikeyhere` with your actual OpenAI API key. You can get an API key by signing up at [OpenAI](https://beta.openai.com/signup/).
 
