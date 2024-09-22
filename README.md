@@ -88,7 +88,7 @@ The installer will create a `.env` file in the project directory and prompt you 
 You can run the provided `setup.sh` script, which will handle creating a `cbt` command you can run from anywhere:
 
 ```bash
-./cbt.sh
+./setup.sh
 ```
 
 ### Step 2: Use the `cbt` Command
