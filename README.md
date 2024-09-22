@@ -159,4 +159,4 @@ If you want to remove Clipboard Translator from your system:
 
 ## License
 
-This project is licensed under the MIT License. See the `LICENSE` file for more details.
+No license. Rip this shit as much as you want.
