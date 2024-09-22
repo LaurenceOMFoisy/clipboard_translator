@@ -55,16 +55,6 @@ If you don’t already have Python installed:
     export PATH="$HOME/.local/bin:$PATH"
     ```
 
-#### For Windows:
-1. Open PowerShell as Administrator.
-2. Run the following command:
-
-    ```bash
-    (Invoke-WebRequest -Uri https://install.python-poetry.org -UseBasicParsing).Content | python -
-    ```
-
-3. Close and reopen PowerShell to update your environment.
-
 ### Step 3: Clone the Clipboard Translator Repository
 
 1. Open your terminal or PowerShell.
@@ -83,15 +73,11 @@ Run the following command inside the `clipboard_translator` folder to install al
 poetry install
 ```
 
-### Step 5: Set Up Your OpenAI API Key
+### Step 5: Get yourself an OpenAI API key
 
-1. Copy the example `.env` file:
+The installer will create a `.env` file in the project directory and prompt you to input it. You need to add your OpenAI API key to this file. You can also do this manually:
 
-    ```bash
-    cp .env.example .env
-    ```
-
-2. Open the `.env` file with any text editor (Notepad, nano, VSCode, etc.), and replace `your-openai-api-key-here` with your actual OpenAI API key. You can get an API key by signing up at [OpenAI](https://beta.openai.com/signup/).
+2. Open the `~/.env` file with any text editor (Notepad, nano, VSCode, etc.), and type `OPENAI_API_KEY=putyourapikeyhere` with your actual OpenAI API key. You can get an API key by signing up at [OpenAI](https://beta.openai.com/signup/).
 
 ---
 
@@ -147,10 +133,12 @@ This command translates the content currently copied to your clipboard and print
 
 If you want to remove Clipboard Translator from your system:
 
-1. Remove the cloned project folder:
+1. Remove the cloned project folder and the `cbt` commands:
 
     ```bash
     rm -rf /path/to/clipboard_translator
+    rm ~/.local/bin/cbt
+    rm ~/.local/bin/cbt.py
     ```
 
 2. Remove any lines you added to your `.bashrc` or `.zshrc` for `$PATH` if necessary.
