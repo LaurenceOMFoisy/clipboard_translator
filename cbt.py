@@ -7,11 +7,11 @@ import openai
 import pyperclip
 from dotenv import load_dotenv
 
-# Load environment variables from the .env file
-load_dotenv()
+# Load environment variables from the .env file in the home directory
+load_dotenv(os.path.expanduser("~/.env"))
 
 # Get the API key from the environment
-openai.api_key = os.getenv("OPENAI_API_KEY")
+openai.api_key = os.getenv("OPENAI_API_KEY")  # Get the API key from the environment
 
 
 def translate_text(text, source_language="en", target_language="fr"):
