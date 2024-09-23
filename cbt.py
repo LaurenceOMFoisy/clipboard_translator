@@ -30,8 +30,10 @@ def get_clipboard_content():
     return pyperclip.paste()
 
 def show_popup(message):
-    # Use Yad to show a popup window with the translated message
-    subprocess.run(['yad', '--text', message, '--button=OK', '--center'])
+    # Use Zenity for the popup, which works with both X11 and Wayland
+    subprocess.run([
+        'zenity', '--info', '--text', message, '--no-wrap', '--width=400', '--height=300'
+    ])
 
 def main():
     parser = argparse.ArgumentParser(description="Translate clipboard content.")
@@ -45,7 +47,7 @@ def main():
         return
 
     translated_text = translate_text(text, source_language=args.source, target_language=args.target)
-    show_popup(translated_text)  # Show the translated text in a popup window
+    show_popup(translated_text)
 
 if __name__ == "__main__":
     main()
