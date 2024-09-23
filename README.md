@@ -55,15 +55,15 @@ If you don’t already have Python installed:
     export PATH="$HOME/.local/bin:$PATH"
     ```
 
-### Step 3: Installing YAD
+### Step 3: Installing Zenity
 
-On a Debian-based system, you can install **Yad** with the following command:
+On a Debian-based system, you can install **Zenity** with the following command:
 
 ```bash
-sudo apt install yad
+sudo apt install zenity
 ```
 
-Yad is used in this project to create popup windows that display the translation result. This ensures that the translation can be accessed without a terminal window, making it convenient to use with keybindings.
+Zenity is used in this project to create popup windows that display the translation result. This ensures that the translation can be accessed without a terminal window, making it convenient to use with keybindings.
 
 ### Step 4: Clone the Clipboard Translator Repository
 
