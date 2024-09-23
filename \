@@ -45,9 +45,9 @@ If you don’t already have Python installed:
 1. Open your terminal.
 2. Run the following command to install Poetry:
 
-    ```bash
-    curl -sSL https://install.python-poetry.org | python3 -
-    ```
+```bash
+curl -sSL https://install.python-poetry.org | python3 -
+```
 
 3. Add Poetry to your system’s PATH (if necessary):
 
@@ -55,17 +55,7 @@ If you don’t already have Python installed:
     export PATH="$HOME/.local/bin:$PATH"
     ```
 
-### Step 3: Installing YAD
-
-On a Debian-based system, you can install **Yad** with the following command:
-
-```bash
-sudo apt install yad
-```
-
-Yad is used in this project to create popup windows that display the translation result. This ensures that the translation can be accessed without a terminal window, making it convenient to use with keybindings.
-
-### Step 4: Clone the Clipboard Translator Repository
+### Step 3: Clone the Clipboard Translator Repository
 
 1. Open your terminal or PowerShell.
 2. Run:
@@ -75,7 +65,7 @@ Yad is used in this project to create popup windows that display the translation
     cd clipboard_translator
     ```
 
-### Step 5: Install the Project Dependencies with Poetry
+### Step 4: Install the Project Dependencies with Poetry
 
 Run the following command inside the `clipboard_translator` folder to install all the required dependencies:
 
@@ -83,7 +73,7 @@ Run the following command inside the `clipboard_translator` folder to install al
 poetry install
 ```
 
-### Step 6: Get yourself an OpenAI API key
+### Step 5: Get yourself an OpenAI API key
 
 The installer will create a `.env` file in your `~/` and prompt you to input the key in it. You need to add your OpenAI API key to this file. You can also do this manually:
 
