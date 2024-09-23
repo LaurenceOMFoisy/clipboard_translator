@@ -157,4 +157,4 @@ If you want to remove Clipboard Translator from your system:
 
 ## License
 
-No license. Rip this shit as much as you want.
+lol
